@@ -1,22 +1,16 @@
-//Ports & Heroku
-var PORT = 8080;
-var mysql = require("mysql");
-var connection = mysql.createConnection({
+const mysql = require("mysql");
+let connection;
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "webuser",
     password: "Pa55w0rd",
     database: "burgers_db"
-});
-
-//Connection
-connection.connect(function(err) {
-    if (err) {
-        console.error('error connecting: ' + err.stack);
-        return;
-    }
-    console.log('connected as id' + connection.threadId); 
-});
-
-//Export
+  });
+}
+connection.connect();
+// Export connection for our ORM to use.
 module.exports = connection;

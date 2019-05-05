@@ -1,37 +1,21 @@
-//Import 
-var orm = require('../config/orm.js');
+const orm = require("../config/orm.js");
 
-//Call Back
-var burger = 
-{
-
-  selectAll: function(callback)
-  {
-    orm.selectAll(function(res)
-    {
-      callback(res);
-    });
-  },
-
-  //Insert
-  insertOne: function(burger_name, callback)
-  {
-    orm.insertOne(burger_name, function(res)
-    {
-      callback(res);
-    });
-  },
-
-  //Update
-  updateOne: function(burger_id, callback)
-  {
-    orm.updateOne(burger_id, function(res)
-    {
-      callback(res);
-    });
-  }
-
+const burger = {
+    all: (cb)=> {
+        orm.all("burgers", res=> {
+          cb(res);
+        });
+       },     // The variables cols and vals are arrays.
+    create: (cols, vals, cb)=> {
+        orm.create("burgers", cols, vals,res=> {
+            cb(res);
+        });
+    },
+    update: (objColVals, condition, cb)=> {
+        orm.update("burgers", objColVals, condition,res=> {
+            cb(res);
+        });
+    }
 };
 
-//Export 
 module.exports = burger;

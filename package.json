@@ -7,10 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincent440/burger.git"
+  },
+  "author": "Vincent S Shury",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vincent440/burger/issues"
+  },
+  "homepage": "https://github.com/Vincent440/burger#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.2"
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.17.1"
   }
 }
