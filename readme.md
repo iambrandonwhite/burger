@@ -1,6 +1,6 @@
 # friend-finder
 
-This full-stack site will take in results from users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
+This full-stack site will allow a user to create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.
 
 ## Demo
 
@@ -16,38 +16,37 @@ Download zip file or Git Clone repository will get you a copy of the project up 
 
 ### File directory structure
 
-     ├── config
-│   ├── connection.js
-│   └── orm.js
-│ 
-├── controllers
-│   └── burgers_controller.js
-│
-├── db
-│   ├── schema.sql
-│   └── seeds.sql
-│
-├── models
-│   └── burger.js
-│ 
-├── node_modules
-│ 
-├── package.json
-│
-├── public
-│   └── assets
-│       ├── css
-│       │   └── burger_style.css
-│       └── img
-│           └── burger.png
-│   
-│
-├── server.js
-│
-└── views
-    ├── index.handlebars
-    └── layouts
-        └── main.handlebars
+    ─ config
+      ─ connection.js
+      ─ orm.js
+ 
+    ─ controllers
+      ─ burgers_controller.js
+
+    ─ db
+      ─ schema.sql
+      ─ seeds.sql
+
+    ─ models
+      ─ burger.js
+
+    ─ node_modules
+
+    ─ package.json
+
+    ─ public
+     ─ assets
+      ─ css
+        ─ burger_style.css
+      ─ img
+        ─ burger.png
+
+    ─ server.js
+
+    ─ views
+       ─ index.handlebars
+       ─ layouts
+         ─ main.handlebars
 
 
 ### Built With
